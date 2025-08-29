@@ -165,29 +165,45 @@
             return /Android/.test(navigator.userAgent);
         }
         
-        // Try to open the app with Universal Links/App Links
+        // Try to open the app with Universal Links/App Links and fallback to custom scheme
         function openApp() {
-            // Use the current HTTPS URL for Universal Links/App Links
             const currentUrl = window.location.href;
+            const customScheme = 'woow://delete-account';
             
             if (isIOS()) {
-                // For iOS, try to open with Universal Links
+                // For iOS, try Universal Links first, then custom scheme
                 window.location.href = currentUrl;
                 
-                // Fallback: if app doesn't open, show download link after 2 seconds
+                // Fallback to custom scheme after 1 second
                 setTimeout(function() {
                     if (document.hidden || document.webkitHidden) {
                         return; // App opened successfully
                     }
-                    // App didn't open, show download option
-                    showDownloadOption();
-                }, 2000);
+                    // Try custom scheme as fallback
+                    window.location.href = customScheme;
+                    
+                    // Final fallback: show download link after 2 more seconds
+                    setTimeout(function() {
+                        if (document.hidden || document.webkitHidden) {
+                            return; // App opened successfully
+                        }
+                        showDownloadOption();
+                    }, 2000);
+                }, 1000);
             } else if (isAndroid()) {
-                // For Android, try with App Links
+                // For Android, try App Links first, then custom scheme
                 window.location.href = currentUrl;
+                
+                // Fallback to custom scheme after 1 second
+                setTimeout(function() {
+                    if (document.hidden || document.webkitHidden) {
+                        return; // App opened successfully
+                    }
+                    window.location.href = customScheme;
+                }, 1000);
             } else {
-                // For other platforms, try the same URL
-                window.location.href = currentUrl;
+                // For other platforms, try custom scheme directly
+                window.location.href = customScheme;
             }
         }
         
