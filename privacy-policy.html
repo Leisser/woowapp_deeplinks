@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Woow App</title>
+    <meta name="description" content="Privacy Policy for Woow App - Learn how we protect your data and privacy">
+    <link rel="icon" type="image/png" href="woow-logo-small.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            padding-bottom: 80px; /* Space for bottom navigation */
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #8B2635 0%, #B84A5A 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        
+        .app-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #8B2635;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #8B2635;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            color: #333;
+            font-size: 1.3rem;
+            margin: 20px 0 10px 0;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .section ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .section li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .contact-info {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #8B2635, #B84A5A);
+            color: white !important;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(139, 38, 53, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .back-link:hover {
+            background: linear-gradient(45deg, #6A1B2A, #8B2635);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(139, 38, 53, 0.6);
+            text-decoration: none;
+            color: white !important;
+        }
+        
+        .last-updated {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #1A1A1A;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #808080;
+            transition: color 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+        
+        .nav-item.active {
+            color: #8B2635;
+        }
+        
+        .nav-item:hover {
+            color: #8B2635;
+        }
+        
+        .nav-icon {
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+        }
+        
+        .nav-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="woow-logo.png" alt="Woow App Logo" class="app-logo">
+                <h1>Privacy Policy</h1>
+            </div>
+            <p>Woow App - Your Privacy Matters</p>
+        </div>
+
+        <div class="content">
+            <a href="index.html" class="back-link">← Back to Deep Link Test Page</a>
+
+            <div class="section">
+                <h2>1. Introduction</h2>
+                <p>Welcome to Woow ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and related services.</p>
+                
+                <p><strong>Last Updated:</strong> August 29, 2024</p>
+                <p><strong>Package Name:</strong> pro.woow.woow</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Information We Collect</h2>
+                
+                <h3>2.1 Personal Information</h3>
+                <p>We may collect the following personal information:</p>
+                <ul>
+                    <li><strong>Account Information:</strong> Email address, password, display name, profile picture</li>
+                    <li><strong>Profile Information:</strong> Full name, bio, user type (artist, politician, viewer), tags</li>
+                    <li><strong>Contact Information:</strong> Email address for communications and account verification</li>
+                    <li><strong>Device Information:</strong> Device type, operating system, unique device identifiers</li>
+                </ul>
+
+                <h3>2.2 Usage Information</h3>
+                <p>We automatically collect information about your use of the app:</p>
+                <ul>
+                    <li><strong>Content Interaction:</strong> Videos watched, audio listened to, events attended</li>
+                    <li><strong>Social Features:</strong> Comments, reactions, follows, shares</li>
+                    <li><strong>App Usage:</strong> Features used, time spent, navigation patterns</li>
+                    <li><strong>Technical Data:</strong> App crashes, performance metrics, error logs</li>
+                </ul>
+
+                <h3>2.3 Content and Media</h3>
+                <p>When you interact with content on our platform:</p>
+                <ul>
+                    <li><strong>Viewing History:</strong> Content you've watched or listened to</li>
+                    <li><strong>Preferences:</strong> Content categories you're interested in</li>
+                    <li><strong>Engagement:</strong> Comments, reactions, and interactions with content</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>3. How We Use Your Information</h2>
+                
+                <h3>3.1 Primary Uses</h3>
+                <ul>
+                    <li><strong>Account Management:</strong> Creating and managing your user account</li>
+                    <li><strong>Content Delivery:</strong> Providing personalized content recommendations</li>
+                    <li><strong>Social Features:</strong> Enabling interactions with other users and content creators</li>
+                    <li><strong>Event Management:</strong> Facilitating event discovery and participation</li>
+                </ul>
+
+                <h3>3.2 Service Improvement</h3>
+                <ul>
+                    <li><strong>Analytics:</strong> Understanding app usage patterns to improve user experience</li>
+                    <li><strong>Performance:</strong> Monitoring app performance and fixing technical issues</li>
+                    <li><strong>Features:</strong> Developing new features based on user behavior</li>
+                </ul>
+
+                <h3>3.3 Communication</h3>
+                <ul>
+                    <li><strong>Account Updates:</strong> Important account-related notifications</li>
+                    <li><strong>Content Updates:</strong> New content from creators you follow</li>
+                    <li><strong>Event Notifications:</strong> Updates about events you're interested in</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>4. Information Sharing and Disclosure</h2>
+                
+                <div class="highlight-box">
+                    <strong>We do not sell, trade, or rent your personal information to third parties.</strong>
+                </div>
+
+                <h3>4.1 When We May Share Information</h3>
+                <ul>
+                    <li><strong>With Your Consent:</strong> When you explicitly authorize us to share your information</li>
+                    <li><strong>Service Providers:</strong> Trusted third-party services that help us operate the app (e.g., Supabase for authentication, payment processors)</li>
+                    <li><strong>Legal Requirements:</strong> When required by law or to protect our rights and safety</li>
+                    <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets</li>
+                </ul>
+
+                <h3>4.2 Public Information</h3>
+                <p>Some information you provide may be publicly visible:</p>
+                <ul>
+                    <li><strong>Profile Information:</strong> Display name, profile picture, bio (as set by your privacy settings)</li>
+                    <li><strong>Content Interactions:</strong> Comments and reactions you make on public content</li>
+                    <li><strong>Event Participation:</strong> Your attendance at public events</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>5. Data Security</h2>
+                
+                <p>We implement appropriate technical and organizational measures to protect your personal information:</p>
+                
+                <ul>
+                    <li><strong>Encryption:</strong> All data transmitted between your device and our servers is encrypted using HTTPS/TLS</li>
+                    <li><strong>Authentication:</strong> Secure authentication through Supabase with password hashing</li>
+                    <li><strong>Access Controls:</strong> Limited access to personal information on a need-to-know basis</li>
+                    <li><strong>Regular Updates:</strong> Keeping our systems and security measures up to date</li>
+                    <li><strong>Monitoring:</strong> Continuous monitoring for security threats and vulnerabilities</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>Important:</strong> While we strive to protect your information, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>6. Data Retention</h2>
+                
+                <p>We retain your personal information for as long as necessary to provide our services and fulfill the purposes outlined in this Privacy Policy:</p>
+                
+                <ul>
+                    <li><strong>Account Data:</strong> Retained while your account is active and for a reasonable period after deactivation</li>
+                    <li><strong>Usage Data:</strong> Retained for analytics and service improvement purposes</li>
+                    <li><strong>Content Interactions:</strong> Retained as part of your user profile and content history</li>
+                    <li><strong>Legal Requirements:</strong> Retained as required by applicable laws and regulations</li>
+                </ul>
+
+                <p>You can request deletion of your account and associated data at any time through the app's delete account feature.</p>
+            </div>
+
+            <div class="section">
+                <h2>7. Your Rights and Choices</h2>
+                
+                <h3>7.1 Access and Control</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li><strong>Access:</strong> Request a copy of your personal information</li>
+                    <li><strong>Update:</strong> Modify your account information and preferences</li>
+                    <li><strong>Delete:</strong> Request deletion of your account and personal data</li>
+                    <li><strong>Portability:</strong> Request a copy of your data in a portable format</li>
+                </ul>
+
+                <h3>7.2 Privacy Settings</h3>
+                <p>You can control your privacy through:</p>
+                <ul>
+                    <li><strong>Profile Privacy:</strong> Control who can see your profile information</li>
+                    <li><strong>Content Visibility:</strong> Manage visibility of your interactions and comments</li>
+                    <li><strong>Notifications:</strong> Choose which notifications you receive</li>
+                    <li><strong>Data Sharing:</strong> Control how your data is used for personalization</li>
+                </ul>
+
+                <h3>7.3 Opt-Out Options</h3>
+                <ul>
+                    <li><strong>Marketing Communications:</strong> Unsubscribe from promotional emails</li>
+                    <li><strong>Analytics:</strong> Opt out of analytics data collection (may affect app functionality)</li>
+                    <li><strong>Push Notifications:</strong> Disable push notifications in your device settings</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>8. Children's Privacy</h2>
+                
+                <p>Our app is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.</p>
+                
+                <p>If you are between 13 and 18 years old, please ensure you have your parent's or guardian's permission before using our app.</p>
+            </div>
+
+            <div class="section">
+                <h2>9. International Data Transfers</h2>
+                
+                <p>Your information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards to protect your information.</p>
+                
+                <p>For users in the European Union, we comply with GDPR requirements for international data transfers.</p>
+            </div>
+
+            <div class="section">
+                <h2>10. Third-Party Services</h2>
+                
+                <p>Our app integrates with third-party services that have their own privacy policies:</p>
+                
+                <ul>
+                    <li><strong>Supabase:</strong> Authentication and database services</li>
+                    <li><strong>Payment Processors:</strong> For content purchases and transactions</li>
+                    <li><strong>Analytics Services:</strong> For app usage analytics</li>
+                    <li><strong>Content Delivery Networks:</strong> For efficient content delivery</li>
+                </ul>
+                
+                <p>We encourage you to review the privacy policies of these third-party services.</p>
+            </div>
+
+            <div class="section">
+                <h2>11. Changes to This Privacy Policy</h2>
+                
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:</p>
+                
+                <ul>
+                    <li>Posting the updated policy in the app</li>
+                    <li>Sending you an email notification</li>
+                    <li>Displaying a prominent notice in the app</li>
+                </ul>
+                
+                <p>Your continued use of the app after any changes indicates your acceptance of the updated Privacy Policy.</p>
+            </div>
+
+            <div class="section">
+                <h2>12. Contact Us</h2>
+                
+                <div class="contact-info">
+                    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+                    
+                    <ul>
+                        <li><strong>Email:</strong> kaweesimon@gmail.com</li>
+                        <li><strong>App Support:</strong> Through the in-app support feature</li>
+                        <li><strong>Address:</strong> Kanjokya house</li>
+                    </ul>
+                    
+                    <p>We will respond to your inquiry within 30 days of receipt.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>13. Legal Basis for Processing (EU Users)</h2>
+                
+                <p>For users in the European Union, we process your personal information based on the following legal grounds:</p>
+                
+                <ul>
+                    <li><strong>Consent:</strong> When you explicitly agree to the processing of your data</li>
+                    <li><strong>Contract Performance:</strong> To provide you with our services</li>
+                    <li><strong>Legitimate Interest:</strong> To improve our services and ensure security</li>
+                    <li><strong>Legal Obligation:</strong> To comply with applicable laws and regulations</li>
+                </ul>
+            </div>
+
+            <div class="last-updated">
+                <p><strong>Last Updated:</strong> August 29, 2024</p>
+                <p><strong>Version:</strong> 1.0</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Home</span>
+        </a>
+        <a href="about-us.html" class="nav-item">
+            <span class="nav-icon">ℹ️</span>
+            <span class="nav-label">About</span>
+        </a>
+        <a href="support.html" class="nav-item">
+            <span class="nav-icon">🆘</span>
+            <span class="nav-label">Support</span>
+        </a>
+        <a href="privacy-policy.html" class="nav-item active">
+            <span class="nav-icon">🔒</span>
+            <span class="nav-label">Privacy</span>
+        </a>
+    </div>
+</body>
+</html>
