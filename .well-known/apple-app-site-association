@@ -5,8 +5,8 @@
       {
         "appID": "R7X354ZM6C.pro.woow.woow",
         "paths": [
-          "/woowapp_deeplinks/delete-account",
-          "/woowapp_deeplinks/*"
+          "/delete-account",
+          "/*"
         ]
       }
     ]
