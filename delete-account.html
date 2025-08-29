@@ -130,11 +130,13 @@
         <div class="status">
             <h3>🔗 Deep Link Status</h3>
             <p>If the Woow app is installed on your device, it should have opened automatically and navigated to the delete account page.</p>
+            <p><strong>iOS Users:</strong> The Woow app needs to be configured for iOS Universal Links or custom URL schemes. Currently, this deep link is optimized for Android.</p>
             <p>If the app didn't open, please make sure:</p>
             <ul style="margin-left: 20px; margin-top: 10px;">
                 <li>The Woow app is installed on your device</li>
                 <li>You're using a supported browser</li>
                 <li>Deep links are enabled in your device settings</li>
+                <li><strong>For iOS:</strong> The app needs iOS-specific deep link configuration</li>
             </ul>
         </div>
         
@@ -148,11 +150,38 @@
     </div>
     
     <script>
-        // Auto-redirect to app if possible
+        // Check if we're on iOS
+        function isIOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent);
+        }
+        
+        // Check if we're on Android
+        function isAndroid() {
+            return /Android/.test(navigator.userAgent);
+        }
+        
+        // Try to open the app with appropriate scheme
+        function openApp() {
+            if (isIOS()) {
+                // For iOS, we need Universal Links or a properly configured custom scheme
+                // For now, show a message that the app needs to be configured for iOS
+                console.log('iOS detected - app needs iOS configuration');
+                return false;
+            } else if (isAndroid()) {
+                // For Android, try the custom scheme
+                window.location.href = 'woow://delete-account';
+                return true;
+            } else {
+                // For other platforms, try the custom scheme
+                window.location.href = 'woow://delete-account';
+                return true;
+            }
+        }
+        
+        // Auto-redirect after 3 seconds
         setTimeout(function() {
-            // Try to open the app with custom scheme
-            window.location.href = 'woow://delete-account';
-        }, 2000);
+            openApp();
+        }, 3000);
     </script>
 </body>
 </html>
