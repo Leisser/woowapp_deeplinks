@@ -128,6 +128,46 @@
             box-shadow: 0 12px 35px rgba(46, 139, 87, 0.8);
         }
         
+        .deep-links-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .deep-link-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background: linear-gradient(45deg, #8B2635, #B84A5A);
+            color: white !important;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(139, 38, 53, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            margin: 10px;
+        }
+        
+        .deep-link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 38, 53, 0.6);
+            text-decoration: none;
+            color: white !important;
+            background: linear-gradient(45deg, #6A1B2A, #8B2635);
+        }
+        
+        .link-icon {
+            font-size: 1.2rem;
+        }
+        
+        .link-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
         .card {
             background: white;
             border-radius: 20px;
@@ -385,8 +425,8 @@
         <div class="hero-section">
             <h2>Your Gateway to Local Content</h2>
             <p>Join thousands of users discovering amazing content from Uganda's finest creators, artists, and political figures. Watch, listen, and engage with content that matters to your community.</p>
-            <a href="#" class="cta-button">Download Woow App</a>
-            <a href="#" class="cta-button secondary">Learn More</a>
+            <a href="https://play.google.com/store/apps/details?id=pro.woow.woow" class="cta-button" target="_blank">Download Woow App</a>
+            <a href="about-us.html" class="cta-button secondary">Learn More</a>
         </div>
 
         <div class="card">
@@ -492,6 +532,18 @@
                     <li>Advanced content recommendation algorithms</li>
                     <li>Enterprise-grade security and privacy protection</li>
                 </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔗 Test Deep Links</h2>
+            <p>Try these deep links to test the app integration:</p>
+            <div class="deep-links-section">
+                <a href="https://leisser.github.io/woowapp_deeplinks/delete-account" class="deep-link-button">
+                    <span class="link-icon">🔗</span>
+                    <span class="link-text">Test Delete Account Deep Link</span>
+                </a>
+                <p class="link-description">This will open the Woow app and navigate to the delete account page (if app is installed)</p>
             </div>
         </div>
 
