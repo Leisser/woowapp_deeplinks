@@ -160,28 +160,42 @@
             return /Android/.test(navigator.userAgent);
         }
         
-        // Try to open the app with appropriate scheme
+        // Try to open the app with custom scheme
         function openApp() {
+            const scheme = 'woow://delete-account';
+            
             if (isIOS()) {
-                // For iOS, we need Universal Links or a properly configured custom scheme
-                // For now, show a message that the app needs to be configured for iOS
-                console.log('iOS detected - app needs iOS configuration');
-                return false;
+                // For iOS, try to open the custom scheme
+                window.location.href = scheme;
+                
+                // Fallback: if app doesn't open, show download link after 2 seconds
+                setTimeout(function() {
+                    if (document.hidden || document.webkitHidden) {
+                        return; // App opened successfully
+                    }
+                    // App didn't open, show download option
+                    showDownloadOption();
+                }, 2000);
             } else if (isAndroid()) {
                 // For Android, try the custom scheme
-                window.location.href = 'woow://delete-account';
-                return true;
+                window.location.href = scheme;
             } else {
                 // For other platforms, try the custom scheme
-                window.location.href = 'woow://delete-account';
-                return true;
+                window.location.href = scheme;
             }
         }
         
-        // Auto-redirect after 3 seconds
+        function showDownloadOption() {
+            const statusDiv = document.querySelector('.status');
+            if (statusDiv) {
+                statusDiv.innerHTML += '<p><strong>App not found:</strong> <a href="https://play.google.com/store/apps/details?id=pro.woow.woow" target="_blank">Download Woow App</a></p>';
+            }
+        }
+        
+        // Auto-redirect after 2 seconds
         setTimeout(function() {
             openApp();
-        }, 3000);
+        }, 2000);
     </script>
 </body>
 </html>
