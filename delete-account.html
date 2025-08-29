@@ -132,9 +132,9 @@
             <p>If the Woow app is installed on your device, it should have opened automatically and navigated to the delete account page.</p>
             <p><strong>How it works:</strong></p>
             <ul style="margin-left: 20px; margin-top: 10px;">
-                <li><strong>iOS:</strong> Uses custom URL scheme (woow://delete-account)</li>
-                <li><strong>Android:</strong> Uses custom URL scheme (woow://delete-account)</li>
-                <li><strong>Universal Links:</strong> HTTPS links for iOS (when configured)</li>
+                <li><strong>iOS:</strong> Uses Universal Links (HTTPS)</li>
+                <li><strong>Android:</strong> Uses App Links (HTTPS)</li>
+                <li><strong>Fallback:</strong> Shows this page if app not installed</li>
             </ul>
             <p>If the app didn't open, please make sure:</p>
             <ul style="margin-left: 20px; margin-top: 10px;">
@@ -165,13 +165,14 @@
             return /Android/.test(navigator.userAgent);
         }
         
-        // Try to open the app with custom scheme
+        // Try to open the app with Universal Links/App Links
         function openApp() {
-            const scheme = 'woow://delete-account';
+            // Use the current HTTPS URL for Universal Links/App Links
+            const currentUrl = window.location.href;
             
             if (isIOS()) {
-                // For iOS, try to open the custom scheme
-                window.location.href = scheme;
+                // For iOS, try to open with Universal Links
+                window.location.href = currentUrl;
                 
                 // Fallback: if app doesn't open, show download link after 2 seconds
                 setTimeout(function() {
@@ -182,11 +183,11 @@
                     showDownloadOption();
                 }, 2000);
             } else if (isAndroid()) {
-                // For Android, try the custom scheme
-                window.location.href = scheme;
+                // For Android, try with App Links
+                window.location.href = currentUrl;
             } else {
-                // For other platforms, try the custom scheme
-                window.location.href = scheme;
+                // For other platforms, try the same URL
+                window.location.href = currentUrl;
             }
         }
         
