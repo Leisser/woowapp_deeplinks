@@ -130,13 +130,18 @@
         <div class="status">
             <h3>🔗 Deep Link Status</h3>
             <p>If the Woow app is installed on your device, it should have opened automatically and navigated to the delete account page.</p>
-            <p><strong>iOS Users:</strong> The Woow app needs to be configured for iOS Universal Links or custom URL schemes. Currently, this deep link is optimized for Android.</p>
+            <p><strong>How it works:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>iOS:</strong> Uses custom URL scheme (woow://delete-account)</li>
+                <li><strong>Android:</strong> Uses custom URL scheme (woow://delete-account)</li>
+                <li><strong>Universal Links:</strong> HTTPS links for iOS (when configured)</li>
+            </ul>
             <p>If the app didn't open, please make sure:</p>
             <ul style="margin-left: 20px; margin-top: 10px;">
                 <li>The Woow app is installed on your device</li>
-                <li>You're using a supported browser</li>
+                <li>You're using a supported browser (Safari, Chrome, etc.)</li>
                 <li>Deep links are enabled in your device settings</li>
-                <li><strong>For iOS:</strong> The app needs iOS-specific deep link configuration</li>
+                <li>You're signed in to the app (required for delete account)</li>
             </ul>
         </div>
         
